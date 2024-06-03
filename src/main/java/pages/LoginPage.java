@@ -31,6 +31,13 @@ public class LoginPage {
         driver.findElement(enterButton).click();
     }
 
+    @Step("Login user")
+    public void loginUser(String userEmail, String userPassword) {
+        setEmail(userEmail);
+        setPassword(userPassword);
+        clickLoginButton();
+    }
+
     @Step("Click register")
     public void clickRegister() {
         driver.findElement(register).click();
@@ -49,12 +56,5 @@ public class LoginPage {
     @Step("Get text of entrance")
     public String getEntranceText() {
         return driver.findElement(entrance).getText();
-    }
-
-    @Step("Login user")
-    public void loginUser(String userEmail, String userPassword) {
-        setEmail(userEmail);
-        setPassword(userPassword);
-        clickLoginButton();
     }
 }

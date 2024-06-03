@@ -11,7 +11,7 @@ import rule.DriverRule;
 import static org.junit.Assert.*;
 
 
-public class RegistrationPageTest {
+public class RegistrationTest {
     private RegistrationPage registrationPage;
     private LoginPage loginPage;
     private User userForCreate;

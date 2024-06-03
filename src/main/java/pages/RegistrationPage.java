@@ -1,9 +1,10 @@
 package pages;
 
-import config.Config;
 import io.qameta.allure.Step;
 import lombok.Data;
 import org.openqa.selenium.*;
+
+import static config.Config.*;
 
 @Data
 public class RegistrationPage {
@@ -15,6 +16,7 @@ public class RegistrationPage {
     private final By registerButton = By.xpath(".//button[text()='Зарегистрироваться']");
     private final By errorMessage = By.xpath(".//p[text()='Некорректный пароль']");
     private final By successRegister = By.xpath(".//h2[text()='Вход']");
+    private final By loginButton = By.xpath(".//a[text() = 'Войти']");
 
     @Step("Input user name")
     public void setName(String userName) {
@@ -51,6 +53,11 @@ public class RegistrationPage {
 
     @Step("Open registration page")
     public void openRegistrationPage() {
-        driver.get(Config.REGISTER_PAGE);
+        driver.get(REGISTER_PAGE);
+    }
+
+    @Step("Click login button")
+    public void clickLoginButton() {
+        driver.findElement(loginButton).click();
     }
 }

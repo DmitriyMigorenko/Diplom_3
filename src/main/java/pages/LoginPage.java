@@ -13,8 +13,6 @@ public class LoginPage {
     private final By password = By.xpath(".//label[text() = 'Пароль']/parent::div//input");
     private final By enterButton = By.xpath(".//button[text() = 'Войти']");
     private final By entrance = By.xpath(".//h2[text() = 'Вход']");
-    private final By register = By.xpath(".//a[text() = 'Зарегистрироваться']");
-    private final By recoveryPass = By.xpath(".//a[text() = 'Восстановить пароль']");
 
     @Step("Input user email")
     public void setEmail(String userEmail) {
@@ -36,16 +34,6 @@ public class LoginPage {
         setEmail(userEmail);
         setPassword(userPassword);
         clickLoginButton();
-    }
-
-    @Step("Click register")
-    public void clickRegister() {
-        driver.findElement(register).click();
-    }
-
-    @Step("Click recovery pass")
-    public void clickRecoveryPass() {
-        driver.findElement(recoveryPass).click();
     }
 
     @Step("Wait for display entrance")

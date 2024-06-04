@@ -2,7 +2,6 @@ package config;
 
 import api.User;
 import io.qameta.allure.Step;
-import io.restassured.response.Response;
 import lombok.Setter;
 
 
@@ -15,20 +14,12 @@ public class UserHelper {
 
 
     @Step("Create user")
-    public Response createUser() {
-        return given().log().all()
+    public void createUser() {
+        given().log().all()
                 .spec(ConfigUser.spec())
                 .body(user)
                 .when()
                 .post("/register");
-    }
-
-    @Step("Login user")
-    public Response loginUser() {
-        return given().log().all()
-                .spec(ConfigUser.spec())
-                .body(userLogin)
-                .when().post("/login");
     }
 
     @Step("Get accessToken")

@@ -10,7 +10,7 @@ public class Config {
     public static final String BASE_URI = "https://stellarburgers.nomoreparties.site";
     public static final String API_AUTH = "/api/auth";
     public static final String REGISTER_PAGE = "https://stellarburgers.nomoreparties.site/register";
-    public static final String RECOVERY_PASS = "https://stellarburgers.nomoreparties.site/forgot-password";
+    public static final String FORGOT_PASSWORD_PAGE = "https://stellarburgers.nomoreparties.site/forgot-password";
     public static final String PROFILE_PAGE = "https://stellarburgers.nomoreparties.site/account/profile";
     public static final int DEFAULT_TIMEOUT = 10;
 

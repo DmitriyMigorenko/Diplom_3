@@ -15,7 +15,6 @@ public class RegistrationPage {
     private final By password = By.xpath(".//label[text()='Пароль']/parent::div//input");
     private final By registerButton = By.xpath(".//button[text()='Зарегистрироваться']");
     private final By errorMessage = By.xpath(".//p[text()='Некорректный пароль']");
-    private final By successRegister = By.xpath(".//h2[text()='Вход']");
     private final By loginButton = By.xpath(".//a[text() = 'Войти']");
 
     @Step("Input user name")

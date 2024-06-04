@@ -1,6 +1,5 @@
 package pages;
 
-import config.Config;
 import io.qameta.allure.Step;
 import lombok.Data;
 import org.openqa.selenium.*;

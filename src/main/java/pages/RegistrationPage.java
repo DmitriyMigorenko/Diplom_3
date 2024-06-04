@@ -9,7 +9,6 @@ import static config.Config.*;
 @Data
 public class RegistrationPage {
     private final WebDriver driver;
-
     private final By name = By.xpath(".//label[text()='Имя']/parent::div//input");
     private final By email = By.xpath(".//label[text()='Email']/parent::div//input");
     private final By password = By.xpath(".//label[text()='Пароль']/parent::div//input");

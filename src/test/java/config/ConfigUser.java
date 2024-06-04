@@ -4,7 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 import static config.Config.*;
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 public class ConfigUser {
     public static RequestSpecification spec() {

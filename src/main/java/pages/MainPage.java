@@ -38,9 +38,19 @@ public class MainPage {
         driver.findElement(bunTab).click();
     }
 
+    @Step("Get bun text")
+    public String getBunText() {
+        return driver.findElement(bunTab).getText();
+    }
+
     @Step("Pick sauce")
     public void clickSauceTab() {
         driver.findElement(sauceTab).click();
+    }
+
+    @Step("Get sauce text")
+    public String getSauceText() {
+        return driver.findElement(sauceTab).getText();
     }
 
     @Step("Pick filling")
@@ -48,9 +58,33 @@ public class MainPage {
         driver.findElement(fillingTab).click();
     }
 
+    @Step("Get filling text")
+    public String getFillingText() {
+        return driver.findElement(fillingTab).getText();
+    }
+
     @Step("Get active tab text")
-    public void getActiveTabText() {
-        driver.findElement(activeTab).getText();
+    public String getActiveTabText() {
+        return driver.findElement(activeTab).getText();
+    }
+
+    @Step("Is bun tab selected?")
+    public boolean isBunTabSelected() {
+        clickSauceTab();
+        clickBunTab();
+        return getBunText().equals(getActiveTabText());
+    }
+
+    @Step("Is sauce tab selected?")
+    public boolean isSauceTabSelected() {
+        clickSauceTab();
+        return getSauceText().equals(getActiveTabText());
+    }
+
+    @Step("Is filling tab selected?")
+    public boolean isFillingTabSelected() {
+        clickFillingTab();
+        return getFillingText().equals(getActiveTabText());
     }
 
     @Step("Get main text")
@@ -61,11 +95,6 @@ public class MainPage {
     @Step("Wait for visible of createOrderButton")
     public void waitCreateOrderButton() {
         waitOfVisibleElement(driver, createOrderButton);
-    }
-
-    @Step("Wait for visible of accountProfileButton")
-    public void waitAccountProfileButton() {
-        waitOfVisibleElement(driver, accountProfileButton);
     }
 
     @Step("Open main page")

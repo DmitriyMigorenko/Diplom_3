@@ -1,9 +1,10 @@
 package pages;
 
-import config.Config;
 import io.qameta.allure.Step;
 import lombok.Data;
 import org.openqa.selenium.*;
+
+import static config.Config.*;
 
 @Data
 public class ForgotPasswordPage {
@@ -17,6 +18,6 @@ public class ForgotPasswordPage {
 
     @Step("Open forgot password page")
     public void openForgotPasswordPage(){
-        driver.get(Config.FORGOT_PASSWORD_PAGE);
+        driver.get(FORGOT_PASSWORD_PAGE);
     }
 }

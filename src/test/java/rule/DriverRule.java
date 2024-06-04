@@ -3,9 +3,8 @@ package rule;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.Getter;
 import org.junit.rules.ExternalResource;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.*;
 
 @Getter
 public class DriverRule extends ExternalResource {

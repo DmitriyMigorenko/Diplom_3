@@ -4,14 +4,12 @@ import api.User;
 import io.qameta.allure.Step;
 import lombok.Setter;
 
-
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 @Setter
 public class UserHelper {
     private User user;
     private User userLogin;
-
 
     @Step("Create user")
     public void createUser() {
@@ -31,7 +29,6 @@ public class UserHelper {
                 .then()
                 .extract().path("accessToken");
     }
-
 
     @Step("Delete user")
     public void deleteUser() {

@@ -16,6 +16,7 @@ public class MainPage {
     private final By sauceTab = By.xpath(".//span[text() = 'Соусы']/parent::div");
     private final By fillingTab = By.xpath(".//span[text() = 'Начинки']/parent::div");
     private final By activeTab = By.xpath(".//div[contains(@class, 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect')]");
+    private final By mainTextConstructor = By.xpath(".//*[text() = 'Соберите бургер']");
 
     @Step("Login via loginAccountButton")
     public void clickLoginAccountButton() {
@@ -50,6 +51,11 @@ public class MainPage {
     @Step("Get active tab text")
     public void getActiveTabText() {
         driver.findElement(activeTab).getText();
+    }
+
+    @Step("Get main text")
+    public String getMainTextConstructor() {
+        return driver.findElement(mainTextConstructor).getText();
     }
 
     @Step("Wait for visible of createOrderButton")

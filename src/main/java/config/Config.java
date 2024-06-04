@@ -11,7 +11,6 @@ public class Config {
     public static final String API_AUTH = "/api/auth";
     public static final String REGISTER_PAGE = "https://stellarburgers.nomoreparties.site/register";
     public static final String FORGOT_PASSWORD_PAGE = "https://stellarburgers.nomoreparties.site/forgot-password";
-    public static final String PROFILE_PAGE = "https://stellarburgers.nomoreparties.site/account/profile";
     public static final int DEFAULT_TIMEOUT = 10;
 
     public static void waitOfVisibleElement(WebDriver driver, By element) {

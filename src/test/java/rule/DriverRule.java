@@ -36,7 +36,7 @@ public class DriverRule extends ExternalResource {
     private void initYaBrowser(){
         System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBinary("C:\\Users\\anduser\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe");
+        chromeOptions.setBinary(System.getProperty("path"));
         driver = new ChromeDriver(chromeOptions);
     }
 }

@@ -23,18 +23,22 @@ public class MainPageTest {
     @Test
     @DisplayName("Bun tab should be selected")
     public void bunTabShouldBeSelected() {
+        mainPage.clickSauceTab();
+        mainPage.clickBunTab();
         assertTrue(mainPage.isBunTabSelected());
     }
 
     @Test
     @DisplayName("Sauce tab should be selected")
     public void sauceTabShouldBeSelected() {
+        mainPage.clickSauceTab();
         assertTrue(mainPage.isSauceTabSelected());
     }
 
     @Test
     @DisplayName("Filling tab should be selected")
     public void fillingTabShouldBeSelected() {
+        mainPage.clickFillingTab();
         assertTrue(mainPage.isFillingTabSelected());
     }
 }

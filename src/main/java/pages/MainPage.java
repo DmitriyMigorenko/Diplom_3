@@ -15,7 +15,7 @@ public class MainPage {
     private final By bunTab = By.xpath(".//span[text() = 'Булки']/parent::div");
     private final By sauceTab = By.xpath(".//span[text() = 'Соусы']/parent::div");
     private final By fillingTab = By.xpath(".//span[text() = 'Начинки']/parent::div");
-    private final By activeTab = By.xpath(".//div[contains(@class, 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect')]");
+    private final By activeTab = By.xpath(".//div[contains(@class, 'current')]");
     private final By mainTextConstructor = By.xpath(".//*[text() = 'Соберите бургер']");
 
     @Step("Login via loginAccountButton")
@@ -70,20 +70,16 @@ public class MainPage {
 
     @Step("Is bun tab selected?")
     public boolean isBunTabSelected() {
-        clickSauceTab();
-        clickBunTab();
         return getBunText().equals(getActiveTabText());
     }
 
     @Step("Is sauce tab selected?")
     public boolean isSauceTabSelected() {
-        clickSauceTab();
         return getSauceText().equals(getActiveTabText());
     }
 
     @Step("Is filling tab selected?")
     public boolean isFillingTabSelected() {
-        clickFillingTab();
         return getFillingText().equals(getActiveTabText());
     }
 
